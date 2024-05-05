@@ -1,13 +1,23 @@
 # Docker Doxygen
 
-| software | location | version |
-|----------|----------|---------|
-| Doxygen  | /usr/bin/doxygen | 1.8.14   |
-| GraphViz | /usr/bin/dot     | 2.40.1   |
+| software | location               | version |
+|----------|------------------------|---------|
+| Doxygen  | /usr/local/bin/doxygen | 1.10.0  |
+| GraphViz | /usr/bin/dot           | 2.40.1  |
 
 
 # How to Use
 
+## Build with specific version of Doxygen
+
+The dockerfile downloads from the [doxygen github release page](https://github.com/doxygen/doxygen/releases),
+so please check there for releases other than 1.10.0.
+
+In order to build with the 1.9.8 release of doxygen run the sample code below
+
+```sh
+docker build --build-arg DOXYGEN_VERSION=1.9.8 .
+```
 
 ## use volume mount & Configuration File
 
