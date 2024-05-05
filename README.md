@@ -38,7 +38,7 @@ And doxygen(build) and publish(gitlab pages).
 `.gitlab-ci.yml` sample is below.
 
 ```yml
-image: tsgkadot/docker-doxygen
+image: omegarelay/doxygen:1.10.0
 pages:
   stage: deploy
   script:
